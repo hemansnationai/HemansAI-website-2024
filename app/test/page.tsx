@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { getCollectionData } from "@/utils/get-url";
-import ShowFieldData from "../components/show-fields";
+import ShowFieldData from "../my-components/show-fields";
 import Link from "next/link";
 
 const Page = () => {
