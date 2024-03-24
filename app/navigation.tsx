@@ -3,6 +3,9 @@
 import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { Button } from "@/components/ui/button"
+import { MoonIcon, SunIcon } from "@radix-ui/react-icons"
+import { useTheme } from "next-themes"
 
 import { cn } from "@/lib/utils";
 // import { Icons } from "@/components/icons"
@@ -15,49 +18,52 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import { DialogDemo } from "./my-components/dialogTalkToExpert";
 
-const components: { title: string; href: string; description: string }[] = [
-  {
-    title: "Alert Dialog",
-    href: "/docs/primitives/alert-dialog",
-    description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
-  },
-  {
-    title: "Hover Card",
-    href: "/docs/primitives/hover-card",
-    description:
-      "For sighted users to preview content available behind a link.",
-  },
-  {
-    title: "Progress",
-    href: "/docs/primitives/progress",
-    description:
-      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
-  },
-  {
-    title: "Scroll-area",
-    href: "/docs/primitives/scroll-area",
-    description: "Visually or semantically separates content.",
-  },
-  {
-    title: "Tabs",
-    href: "/docs/primitives/tabs",
-    description:
-      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
-  },
-  {
-    title: "Tooltip",
-    href: "/docs/primitives/tooltip",
-    description:
-      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
-  },
-];
+
+// const components: { title: string; href: string; description: string }[] = [
+//   {
+//     title: "Alert Dialog",
+//     href: "/docs/primitives/alert-dialog",
+//     description:
+//       "A modal dialog that interrupts the user with important content and expects a response.",
+//   },
+//   {
+//     title: "Hover Card",
+//     href: "/docs/primitives/hover-card",
+//     description:
+//       "For sighted users to preview content available behind a link.",
+//   },
+//   {
+//     title: "Progress",
+//     href: "/docs/primitives/progress",
+//     description:
+//       "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+//   },
+//   {
+//     title: "Scroll-area",
+//     href: "/docs/primitives/scroll-area",
+//     description: "Visually or semantically separates content.",
+//   },
+//   {
+//     title: "Tabs",
+//     href: "/docs/primitives/tabs",
+//     description:
+//       "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
+//   },
+//   {
+//     title: "Tooltip",
+//     href: "/docs/primitives/tooltip",
+//     description:
+//       "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
+//   },
+// ];
 
 export function LandingPageNavigation() {
+  const { setTheme, theme } = useTheme()
   return (
-    <div className="flex flex-row justify-between container mt-4">
-      <div className="flex ">
+    <div className="container flex h-14 w-screen items-center">
+      <div className="mr-4 hidden md:flex">
         <a className="mr-6 flex items-center space-x-2" href="/">
           <Image
             alt="HemansAI logo"
@@ -72,7 +78,7 @@ export function LandingPageNavigation() {
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
-              <NavigationMenuTrigger>Services</NavigationMenuTrigger>
+              <NavigationMenuTrigger>Products</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                   <li className="row-span-3">
@@ -107,33 +113,164 @@ export function LandingPageNavigation() {
               </NavigationMenuContent>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuTrigger>Components</NavigationMenuTrigger>
+              <NavigationMenuTrigger>Services</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                  {components.map((component) => (
-                    <ListItem
-                      key={component.title}
-                      title={component.title}
-                      href={component.href}
+                  <ListItem
+                      key=""
+                      title="AI Consulting"
+                      href="/ai-consulting"
                     >
-                      {component.description}
+                      Consulting
                     </ListItem>
-                  ))}
+                    <ListItem
+                      key=""
+                      title="Advanced-Data Analytics & Consulting"
+                      href="/advanced-data-analytics-consulting"
+                    >
+                      Consulting
+                    </ListItem>
+                    <ListItem
+                      key=""
+                      title="MLOps"
+                      href="/mlops"
+                    >
+                      Consulting
+                    </ListItem>
+                    <ListItem
+                      key=""
+                      title="Data Engineering"
+                      href="/data-engineering"
+                    >
+                      Consulting
+                    </ListItem>
+                    <ListItem
+                      key=""
+                      title="Data Architecture"
+                      href="/data-architecture"
+                    >
+                      Consulting
+                    </ListItem>
+                    <ListItem
+                      key=""
+                      title="AI Consulting"
+                      href="/ai-consulting"
+                    >
+                      Consulting
+                    </ListItem>
                 </ul>
               </NavigationMenuContent>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link href="/docs" legacyBehavior passHref>
+              <NavigationMenuTrigger>Sectors</NavigationMenuTrigger>
+              <NavigationMenuContent>
+              <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                  <ListItem
+                      key=""
+                      title="Healthcare"
+                      href="/healthcare"
+                    >
+                      Consulting
+                    </ListItem>
+                    <ListItem
+                      key=""
+                      title="Education"
+                      href="/education"
+                    >
+                      Consulting
+                    </ListItem>
+                    <ListItem
+                      key=""
+                      title="Energy"
+                      href="/energy"
+                    >
+                      Consulting
+                    </ListItem>
+                    <ListItem
+                      key=""
+                      title="Defense"
+                      href="/defence"
+                    >
+                      Consulting
+                    </ListItem>
+                    <ListItem
+                      key=""
+                      title="Law Enforcement"
+                      href="/law-enforcement"
+                    >
+                      Consulting
+                    </ListItem>
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <NavigationMenuTrigger>Resources</NavigationMenuTrigger>
+              <NavigationMenuContent>
+              <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                  <ListItem
+                      key=""
+                      title="Blog"
+                      href="/blog"
+                    >
+                      Consulting
+                    </ListItem>
+                    <ListItem
+                      key=""
+                      title="Use Cases"
+                      href="/use-cases"
+                    >
+                      Consulting
+                    </ListItem>
+                    <ListItem
+                      key=""
+                      title="Documents"
+                      href="/documents"
+                    >
+                      Consulting
+                    </ListItem>
+                    <ListItem
+                      key=""
+                      title="Books"
+                      href="/books"
+                    >
+                      Consulting
+                    </ListItem>
+              </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <Link href="/about" legacyBehavior passHref>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  Documentation
+                  About
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <Link href="" legacyBehavior passHref>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  Community
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <Link href="/career" legacyBehavior passHref>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  Career
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <Link href="" legacyBehavior passHref>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  Podcast
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
       </div>
-      <div>
-        <a target="_blank" rel="noreferrer" href="https://github.com/hemansai">
+      <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
+        <a className="pt-2" target="_blank" rel="noreferrer" href="https://github.com/hemansai">
           <div className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 py-2 w-9 px-0">
             <svg viewBox="0 0 438.549 438.549" className="h-4 w-4">
               <path
@@ -145,6 +282,7 @@ export function LandingPageNavigation() {
           </div>
         </a>
         <a
+        className="pt-2"
           target="_blank"
           rel="noreferrer"
           href="https://www.linkedin.com/company/hemansai/"
@@ -162,7 +300,13 @@ export function LandingPageNavigation() {
             </svg>
           </div>
         </a>
-      </div>
+        <Button className=" hidden md:block border-0" onClick={() => setTheme(theme == "light"? "dark" : "light")} variant="outline" size="icon">
+          <SunIcon className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+          <MoonIcon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+          <span className="sr-only">Toggle theme</span>
+        </Button>
+        <DialogDemo />
+        </div>
     </div>
   );
 }
