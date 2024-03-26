@@ -19,6 +19,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { DialogDemo } from "./my-components/dialogTalkToExpert";
+import { MobileNavigation } from "./mobile-navigation";
 
 
 // const components: { title: string; href: string; description: string }[] = [
@@ -63,6 +64,7 @@ export function LandingPageNavigation() {
   const { setTheme, theme } = useTheme()
   return (
     <div className="container flex h-14 w-screen items-center">
+        <MobileNavigation/>
       <div className="mr-4 hidden md:flex">
         <a className="mr-6 flex items-center space-x-2" href="/">
           <Image
@@ -75,7 +77,7 @@ export function LandingPageNavigation() {
           <span className="hidden font-bold sm:inline-block">HemansAI</span>
         </a>
 
-        <NavigationMenu>
+        <NavigationMenu className="hidden md:flex">
           <NavigationMenuList>
             <NavigationMenuItem>
               <NavigationMenuTrigger>Products</NavigationMenuTrigger>
@@ -269,7 +271,7 @@ export function LandingPageNavigation() {
           </NavigationMenuList>
         </NavigationMenu>
       </div>
-      <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
+      <div className="flex flex-1 items-center justify-end space-x-2 md:justify-end">
         <a className="pt-2" target="_blank" rel="noreferrer" href="https://github.com/hemansai">
           <div className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 py-2 w-9 px-0">
             <svg viewBox="0 0 438.549 438.549" className="h-4 w-4">
@@ -300,11 +302,11 @@ export function LandingPageNavigation() {
             </svg>
           </div>
         </a>
-        <Button className=" hidden md:block border-0" onClick={() => setTheme(theme == "light"? "dark" : "light")} variant="outline" size="icon">
+        {/* <Button className=" hidden md:block border-0" onClick={() => setTheme(theme == "light"? "dark" : "light")} variant="outline" size="icon">
           <SunIcon className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
           <MoonIcon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
           <span className="sr-only">Toggle theme</span>
-        </Button>
+        </Button> */}
         <DialogDemo />
         </div>
     </div>
