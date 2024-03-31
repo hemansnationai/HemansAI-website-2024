@@ -63,8 +63,8 @@ import { MobileNavigation } from "./mobile-navigation";
 export function LandingPageNavigation() {
   const { setTheme, theme } = useTheme()
   return (
-    <div className="container flex h-14 w-screen items-center">
-        <MobileNavigation/>
+    <div className="container flex h-20 w-screen items-center">
+      <MobileNavigation />
       <div className="mr-4 hidden md:flex">
         <a className="mr-6 flex items-center space-x-2" href="/">
           <Image
@@ -72,7 +72,7 @@ export function LandingPageNavigation() {
             src="/images/logo.png"
             height={48}
             width={48}
-            className="ml-6 h-6 w-6"
+            className="ml-6 h-6 w-6 hidden md:flex"
           />
           <span className="hidden font-bold sm:inline-block">HemansAI</span>
         </a>
@@ -270,8 +270,9 @@ export function LandingPageNavigation() {
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide flex md:hidden lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
       </div>
-      <div className="flex flex-1 items-center justify-end space-x-2 md:justify-end">
+      <div className="hidden md:flex flex-1 items-center justify-end space-x-2 md:justify-end">
         <a className="pt-2" target="_blank" rel="noreferrer" href="https://github.com/hemansai">
           <div className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 py-2 w-9 px-0">
             <svg viewBox="0 0 438.549 438.549" className="h-4 w-4">

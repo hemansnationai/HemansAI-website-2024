@@ -10,7 +10,7 @@ const HomePage = () => {
     <>
       {/* NavigationMenuDemo */}
       <LandingPageNavigation />
-      <section className="mx-auto flex max-w-[980px] flex-col items-center gap-2 py-8 md:py-12 md:pb-8 lg:py-24 lg:pb-20">
+      <section className="px-5 mx-auto flex max-w-[980px] flex-col items-center gap-2 py-8 md:py-12 md:pb-8 lg:py-24 lg:pb-20">
         <a className="inline-flex items-center rounded-lg bg-muted px-3 py-1 text-sm font-medium" href="/docs/changelog">
           🎉 <div data-orientation="vertical" role="none" className="shrink-0 bg-border w-[1px] mx-2 h-4" /> <span className="sm:hidden">Introducing Blocks</span>
           <span className="hidden sm:inline">Introducing Blocks</span>

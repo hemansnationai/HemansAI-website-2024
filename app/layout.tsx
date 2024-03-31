@@ -11,11 +11,14 @@ const RootLayout: FC = ({ children }) => {
   return (
     <>
       <html>
-        <head></head>
+        <head>
+          <link rel="icon" sizes="16x16" href="images/logo.ico" />
+          <title>HemansAI</title>
+        </head>
         <body>
         <ThemeProvider
             attribute="class"
-            defaultTheme="system"
+            defaultTheme=""
             enableSystem
             disableTransitionOnChange
           >
