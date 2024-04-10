@@ -80,91 +80,7 @@ export function LandingPageNavigation() {
         <NavigationMenu className="hidden md:flex">
           <NavigationMenuList>
             <NavigationMenuItem>
-              <NavigationMenuTrigger>Products</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                  <li className="row-span-3">
-                    <NavigationMenuLink asChild>
-                      <a
-                        className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                        href="/"
-                      >
-                        {/* <Icons.logo className="h-6 w-6" /> */}
-                        <div className="mb-2 mt-4 text-lg font-medium">
-                          HemansAI
-                        </div>
-                        <p className="text-sm leading-tight text-muted-foreground">
-                        Integrate Artificial Intelligence into your company.
-                        </p>
-                      </a>
-                    </NavigationMenuLink>
-                  </li>
-                  <ListItem href="/docs" title="Introduction">
-                    Re-usable components built using Radix UI and Tailwind CSS.
-                  </ListItem>
-                  <ListItem href="/docs/installation" title="Installation">
-                    How to install dependencies and structure your app.
-                  </ListItem>
-                  <ListItem
-                    href="/docs/primitives/typography"
-                    title="Typography"
-                  >
-                    Styles for headings, paragraphs, lists...etc
-                  </ListItem>
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuTrigger>Services</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                  <ListItem
-                      key=""
-                      title="AI Consulting"
-                      href="/ai-consulting"
-                    >
-                      Consulting
-                    </ListItem>
-                    <ListItem
-                      key=""
-                      title="Advanced-Data Analytics & Consulting"
-                      href="/advanced-data-analytics-consulting"
-                    >
-                      Consulting
-                    </ListItem>
-                    <ListItem
-                      key=""
-                      title="MLOps"
-                      href="/mlops"
-                    >
-                      Consulting
-                    </ListItem>
-                    <ListItem
-                      key=""
-                      title="Data Engineering"
-                      href="/data-engineering"
-                    >
-                      Consulting
-                    </ListItem>
-                    <ListItem
-                      key=""
-                      title="Data Architecture"
-                      href="/data-architecture"
-                    >
-                      Consulting
-                    </ListItem>
-                    <ListItem
-                      key=""
-                      title="AI Consulting"
-                      href="/ai-consulting"
-                    >
-                      Consulting
-                    </ListItem>
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuTrigger>Sectors</NavigationMenuTrigger>
+              <NavigationMenuTrigger>Service</NavigationMenuTrigger>
               <NavigationMenuContent>
               <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
                   <ListItem
@@ -172,38 +88,59 @@ export function LandingPageNavigation() {
                       title="Healthcare"
                       href="/healthcare"
                     >
-                      Consulting
+                     Advanced-Data Analytics & Consulting
                     </ListItem>
                     <ListItem
                       key=""
                       title="Education"
                       href="/education"
                     >
-                      Consulting
+                      AI Consulting
                     </ListItem>
                     <ListItem
                       key=""
                       title="Energy"
                       href="/energy"
                     >
-                      Consulting
+                      MLOps
                     </ListItem>
                     <ListItem
                       key=""
                       title="Defense"
                       href="/defence"
                     >
-                      Consulting
+                      Data Engineering
                     </ListItem>
                     <ListItem
                       key=""
                       title="Law Enforcement"
                       href="/law-enforcement"
                     >
-                      Consulting
+                      Generative AI Consulting
                     </ListItem>
                 </ul>
               </NavigationMenuContent>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <Link href="" legacyBehavior passHref>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                 Products
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <Link href="" legacyBehavior passHref>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                Sectors
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <Link href="/about" legacyBehavior passHref>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  Outsourcing
+                </NavigationMenuLink>
+              </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuTrigger>Resources</NavigationMenuTrigger>
@@ -211,15 +148,22 @@ export function LandingPageNavigation() {
               <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
                   <ListItem
                       key=""
-                      title="Blog"
+                      title="Blogs"
                       href="/blog"
                     >
                       Consulting
                     </ListItem>
                     <ListItem
                       key=""
-                      title="Use Cases"
+                      title="Use cases"
                       href="/use-cases"
+                    >
+                      Consulting
+                    </ListItem>
+                    <ListItem
+                      key=""
+                      title="Free ebooks"
+                      href="/ebooks"
                     >
                       Consulting
                     </ListItem>
@@ -232,8 +176,8 @@ export function LandingPageNavigation() {
                     </ListItem>
                     <ListItem
                       key=""
-                      title="Books"
-                      href="/books"
+                      title="Research"
+                      href="/research"
                     >
                       Consulting
                     </ListItem>
@@ -241,23 +185,23 @@ export function LandingPageNavigation() {
               </NavigationMenuContent>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link href="/about" legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  About
-                </NavigationMenuLink>
-              </Link>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <Link href="" legacyBehavior passHref>
+              <Link href="/career" legacyBehavior passHref>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                   Community
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link href="/career" legacyBehavior passHref>
+              <Link href="" legacyBehavior passHref>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                   Career
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <Link href="" legacyBehavior passHref>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  About
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
@@ -269,11 +213,12 @@ export function LandingPageNavigation() {
               </Link>
             </NavigationMenuItem>
           </NavigationMenuList>
+
         </NavigationMenu>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide flex md:hidden lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
       </div>
       <div className="hidden md:flex flex-1 items-center justify-end space-x-2 md:justify-end">
-        <a className="pt-2" target="_blank" rel="noreferrer" href="https://github.com/hemansai">
+        {/* <a className="pt-2" target="_blank" rel="noreferrer" href="https://github.com/hemansai">
           <div className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 py-2 w-9 px-0">
             <svg viewBox="0 0 438.549 438.549" className="h-4 w-4">
               <path
@@ -302,7 +247,7 @@ export function LandingPageNavigation() {
               <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"></path>
             </svg>
           </div>
-        </a>
+        </a> */}
         {/* <Button className=" hidden md:block border-0" onClick={() => setTheme(theme == "light"? "dark" : "light")} variant="outline" size="icon">
           <SunIcon className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
           <MoonIcon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
