@@ -74,7 +74,7 @@ export function LandingPageNavigation() {
             width={48}
             className="ml-6 h-6 w-6 hidden md:flex"
           />
-          <span className="hidden font-bold sm:inline-block">HemansAI</span>
+          <span className="hidden font-bold sm:inline-block">Dextar</span>
         </a>
 
         <NavigationMenu className="hidden md:flex">
@@ -85,10 +85,58 @@ export function LandingPageNavigation() {
               <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
                   <ListItem
                       key=""
-                      title="Healthcare"
+                      title="AI Consulting"
                       href="/healthcare"
                     >
-                     Advanced-Data Analytics & Consulting
+
+                    </ListItem>
+                    <ListItem
+                      key=""
+                      title="MLOps"
+                      href="/education"
+                    >
+                      
+                    </ListItem>
+                    <ListItem
+                      key=""
+                      title="Data Engineering"
+                      href="/energy"
+                    >
+                      
+                    </ListItem>
+                    <ListItem
+                      key=""
+                      title="NLP Solution"
+                      href="/defence"
+                    >
+                      
+                    </ListItem>
+                    <ListItem
+                      key=""
+                      title="Generative AI Consulting"
+                      href="/law-enforcement"
+                    >
+                      
+                    </ListItem>
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <Link href="" legacyBehavior passHref>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                 Products
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <NavigationMenuTrigger>Sectors</NavigationMenuTrigger>
+              <NavigationMenuContent>
+              <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                  <ListItem
+                      key=""
+                      title="Advanced-Data Analytics & Consulting"
+                      href="advanced-data-analytics-and-Consulting"
+                    >
                     </ListItem>
                     <ListItem
                       key=""
@@ -120,20 +168,6 @@ export function LandingPageNavigation() {
                     </ListItem>
                 </ul>
               </NavigationMenuContent>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <Link href="" legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                 Products
-                </NavigationMenuLink>
-              </Link>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <Link href="" legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Sectors
-                </NavigationMenuLink>
-              </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <Link href="/about" legacyBehavior passHref>

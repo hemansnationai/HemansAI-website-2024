@@ -13,7 +13,7 @@ const RootLayout: FC = ({ children }) => {
       <html>
         <head>
           <link rel="icon" sizes="16x16" href="images/logo.ico" />
-          <title>HemansAI</title>
+          <title>Dextar</title>
         </head>
         <body>
         <ThemeProvider
